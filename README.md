@@ -2,7 +2,7 @@
 
 Code and data accompanying *MonkeyDrive: An open-source microdrive for nonhuman primate neurophysiology*
 
-This repository reproduces the validation analyses in Figure 3 and the three example drift maps in Figure 4. The control software and firmware live in [MonkeyDrive](https://github.com/jazlab/MonkeyDrive). You can learn more at our [project website](https://jazlab.github.io/MonkeyDrive/).
+This repository reproduces the validation analyses in Figure 3 and the three example drift maps in Figure 4. The control software and firmware live in [monkeydrive](https://github.com/jazlab/monkeydrive). You can learn more at our [project website](https://jazlab.github.io/MonkeyDrive/).
 
 ## Get the code and data
 

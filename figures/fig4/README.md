@@ -36,8 +36,8 @@ amplitude rank using the `winter` colormap. Plots show uncorrected peak depths;
 no motion correction or spike sorting is performed here. Arrays are memory-mapped
 for loading, though filtering and plotting still allocate memory.
 
-The root [data manifest](../../data_manifest.json) retains the original six SHA-256
-checksums and recording identifiers alongside the Figure 3 inputs.
+The root [data manifest](../../data_manifest.json) records the SHA-256
+checksums for the six arrays and recording identifiers alongside the Figure 3 inputs.
 
 ## Relationship to the manuscript
 

@@ -1,0 +1,143 @@
+{
+  "figure4_release": {
+    "repository": "jazlab/monkeydrive_paper",
+    "tag": "data-v1",
+    "asset": "figure4-data.zip",
+    "bytes": 330409825,
+    "sha256": "cdca6f535f41dba43e84de881ff4f46ad77b558d4b534a350dc20fabcfad5f1e"
+  },
+  "files": [
+    {
+      "figure": 3,
+      "file": "figures/fig3/fig3a/data/memdrive/laser_spot_20260710T185239.814404Z_e0540f9d_data_memdrive_static_t1.csv",
+      "bytes": 450193,
+      "sha256": "ef3a1218f934422e232cc0efde1c244f070e3a4ee4800a9972512ff1c4e54921"
+    },
+    {
+      "figure": 3,
+      "file": "figures/fig3/fig3a/data/memdrive/laser_spot_20260710T185427.677910Z_57642810_data_memdrive_moving_t1.csv",
+      "bytes": 1010711,
+      "sha256": "b8718e0365f4943c6ceab76c2444c3c92450539665ad3bc2e95dfb2b69adaaba"
+    },
+    {
+      "figure": 3,
+      "file": "figures/fig3/fig3a/data/memdrive/laser_spot_20260710T190225.025454Z_c3130a47_data_memdrive_moving_t2.csv",
+      "bytes": 1001535,
+      "sha256": "2097b5aa56336ac8aa0710ec74b74be1d01cdc3daa6b5bf447269263ea2cd40e"
+    },
+    {
+      "figure": 3,
+      "file": "figures/fig3/fig3a/data/memdrive/laser_spot_20260710T190617.104914Z_cd03254b_data_memdrive_moving_t3.csv",
+      "bytes": 1002897,
+      "sha256": "d1e3b765bcac2fc3ab819d0ba0762af60c06f355c495f912d317512d2d9027c0"
+    },
+    {
+      "figure": 3,
+      "file": "figures/fig3/fig3a/data/monkeydrive/laser_spot_20260714T053926.969529Z_4dc2344c_data_monkeydrive_static_t1.csv",
+      "bytes": 504831,
+      "sha256": "228ba7bfea19ab59190bd746afd6d38702b030bb5139878ec62842a7cceb144e"
+    },
+    {
+      "figure": 3,
+      "file": "figures/fig3/fig3a/data/monkeydrive/laser_spot_20260714T054557.463018Z_579ead8c_data_monkeydrive_moving_t1.csv",
+      "bytes": 1017514,
+      "sha256": "8cd746fea5d87a7555ba59114cbe23c9a33d3bc27d3a4dd1d773ca4cc908271f"
+    },
+    {
+      "figure": 3,
+      "file": "figures/fig3/fig3a/data/monkeydrive/laser_spot_20260714T054844.463004Z_b4b6e2ba_data_monkeydrive_moving_t2.csv",
+      "bytes": 1006100,
+      "sha256": "8ad14ca648747417460c7c3b9e6fc1ab8538e1d997e5a1b2527596d741839442"
+    },
+    {
+      "figure": 3,
+      "file": "figures/fig3/fig3a/data/monkeydrive/laser_spot_20260714T055128.074650Z_7ebd8c2d_data_monkeydrive_moving_t3.csv",
+      "bytes": 1012176,
+      "sha256": "4e209fb3d4e65b7d2da819370198d7f1dc321023a1acb0e8c8deefb7b494bef9"
+    },
+    {
+      "figure": 3,
+      "file": "figures/fig3/fig3a/data/nandrive/laser_spot_20260714T061330.114509Z_7b8be294_data_nandrive_static_t1.csv",
+      "bytes": 522790,
+      "sha256": "e39d8b363708c03dae035a07f9e01472164ed4e863165ba0de49b27e62fdb8f5"
+    },
+    {
+      "figure": 3,
+      "file": "figures/fig3/fig3a/data/nandrive/laser_spot_20260714T085010.573297Z_51832ff7_data_nandrive_moving_t1.csv",
+      "bytes": 1033411,
+      "sha256": "16063345918848706170be5e2daa222295c5afc2605137f9c41353a2720e9f23"
+    },
+    {
+      "figure": 3,
+      "file": "figures/fig3/fig3a/data/nandrive/laser_spot_20260714T085422.336710Z_7ae9fe24_data_nandrive_moving_t2.csv",
+      "bytes": 1084682,
+      "sha256": "e3e90894036ab33690406b38c787fb7799c48be8b343c27f29017b011c7ef892"
+    },
+    {
+      "figure": 3,
+      "file": "figures/fig3/fig3a/data/nandrive/laser_spot_20260714T085822.293593Z_0f5e5c72_data_nandrive_moving_t3.csv",
+      "bytes": 1037125,
+      "sha256": "e8e796d086df4e50ad079e9172c299a535f4e1ac10e3e63658a316fbc7e9fa05"
+    },
+    {
+      "figure": 3,
+      "file": "figures/fig3/fig3b/axial_position_data.csv",
+      "bytes": 331,
+      "sha256": "ae0089b2bde6ec662e97bba10727ba91a6f99bbbf1f7b93d7d89e54c33345bc5"
+    },
+    {
+      "figure": 4,
+      "file": "figures/fig4/data/DN_20260721_B_DN_TH2_LIP_g0_imec3/peak_locations.npy",
+      "bytes": 94059904,
+      "sha256": "ff2d6c7d4ba0e040cb88f59fb0d5825fd9896aa11146aa4906d5590941b795e2",
+      "region": "DN",
+      "session": "20260721_B_DN_TH2_LIP_g0",
+      "probe": "imec3"
+    },
+    {
+      "figure": 4,
+      "file": "figures/fig4/data/DN_20260721_B_DN_TH2_LIP_g0_imec3/peaks.npy",
+      "bytes": 188119744,
+      "sha256": "339bc1fdd9ce66f11fa43281fd846bba4fe5676a0c341a825bc1825c5cc9ca5a",
+      "region": "DN",
+      "session": "20260721_B_DN_TH2_LIP_g0",
+      "probe": "imec3"
+    },
+    {
+      "figure": 4,
+      "file": "figures/fig4/data/LIP_20260723_B_DN_TH2_LIP_g0_imec2/peak_locations.npy",
+      "bytes": 50642976,
+      "sha256": "b15b2182093cd0e73ec02232b5ef4c27e02eac0020f0bee9e55d4d116c2c9888",
+      "region": "LIP",
+      "session": "20260723_B_DN_TH2_LIP_g0",
+      "probe": "imec2"
+    },
+    {
+      "figure": 4,
+      "file": "figures/fig4/data/LIP_20260723_B_DN_TH2_LIP_g0_imec2/peaks.npy",
+      "bytes": 101285888,
+      "sha256": "5167a52a32acef9b0f74c99464579f4cbfb6177cbd5747fbb3d22705a127f090",
+      "region": "LIP",
+      "session": "20260723_B_DN_TH2_LIP_g0",
+      "probe": "imec2"
+    },
+    {
+      "figure": 4,
+      "file": "figures/fig4/data/Thalamus_20260721_B_DN_TH2_LIP_g0_imec0/peak_locations.npy",
+      "bytes": 246543088,
+      "sha256": "bfa36146b55fed5efb9369f0ae2e5e5381e35dd4060a2a085f5d5536beb0bba9",
+      "region": "Thalamus",
+      "session": "20260721_B_DN_TH2_LIP_g0",
+      "probe": "imec0"
+    },
+    {
+      "figure": 4,
+      "file": "figures/fig4/data/Thalamus_20260721_B_DN_TH2_LIP_g0_imec0/peaks.npy",
+      "bytes": 493086112,
+      "sha256": "02db8bc35a3564fc8ca517bab65c47782051b6eefa8c8e82d0248b17255db45d",
+      "region": "Thalamus",
+      "session": "20260721_B_DN_TH2_LIP_g0",
+      "probe": "imec0"
+    }
+  ]
+}

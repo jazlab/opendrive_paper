@@ -75,4 +75,4 @@ Run the downloader tests from the repository root with `python -m unittest disco
 
 ## License
 
-Repository code, documentation, and release data are distributed under the [MIT License](LICENSE). Dependencies retain their own licenses. Please cite *MonkeyDrive: An open-source microdrive for nonhuman primate neurophysiology* when using these materials.
+Repository code, documentation, and release data are distributed under the [MIT License](LICENSE). Dependencies retain their own licenses. Please cite *MonkeyDrive: An open-source microdrive for primate neurophysiology* when using these materials.

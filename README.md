@@ -17,7 +17,7 @@ python verify_data.py
 
 `download_data.py` downloads `figure4-data.zip`, verifies the archive and each extracted file against SHA-256 checksums, and installs the arrays in `figures/fig4/data/`. It skips downloading when all six files already match. Allow about 3 GB of free disk space for the download, extraction, and outputs. You can skip the download to run only Figure 3.
 
-While the repository is private, the downloader uses an authenticated [GitHub CLI](https://cli.github.com/) session (`gh auth login`) if anonymous download is unavailable. Once the repository is public, no GitHub account or CLI is needed to download the data. Alternatively, download `figure4-data.zip` from the release in your browser and run `python download_data.py --archive /path/to/figure4-data.zip`.
+Alternatively, download `figure4-data.zip` from the [data release](https://github.com/jazlab/monkeydrive_paper/releases/tag/data-v1) in your browser and run `python download_data.py --archive /path/to/figure4-data.zip`.
 
 `verify_data.py` checks every input and reports missing or damaged files. For Figure 3 alone, use `python verify_data.py --figure 3`.
 
@@ -68,6 +68,10 @@ Open a notebook in JupyterLab, then run its cells in order:
 | Figure 4 | [`figures/fig4/drift_map.ipynb`](figures/fig4/drift_map.ipynb) | `figures/fig4/results/` |
 
 Use each notebook's containing folder as its working directory (the JupyterLab default when opening a notebook). Both notebooks use the existing analysis code. Figure 3 provides editable plotting settings, inline plots, and result tables for exploration. `requirements-notebook.txt` includes the shared analysis dependencies and adds JupyterLab for both notebooks.
+
+## Tests
+
+Run the downloader tests from the repository root with `python -m unittest discover -v`. These tests run offline and do not require the recording data.
 
 ## License
 

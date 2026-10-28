@@ -18,7 +18,7 @@ and command-line entry point share [`drift_map.py`](drift_map.py).
 The analysis produces `LIP_drift_map.png`, `Thalamus_drift_map.png`, and
 `DN_drift_map.png`. The root runner saves them to the repository's `results/fig4/`
 by default; the notebook saves them to this directory's `results/`.
-The supplied reference PNGs remain in this directory's `figures/`.
+Reference PNGs are included in this directory's `figures/`.
 
 ## Data and calculation
 
@@ -28,23 +28,19 @@ See the root README for data download instructions. Each recording has paired
 `peaks.npy` and `peak_locations.npy` arrays in matching peak order.
 The plot uses `sample_index` and signed `amplitude` from peaks, and `y` (micrometers
 from the probe tip) from peak locations. Sampling frequencies came from the
-corresponding SpikeGLX AP metadata in the supplied dataset.
+corresponding SpikeGLX AP recording metadata.
 
-The supplied calculation retains signed amplitudes strictly above their 25th
+The calculation retains signed amplitudes strictly above their 25th
 percentile, plots every 30th retained peak, and colors plotted peaks by signed
 amplitude rank using the `winter` colormap. Plots show uncorrected peak depths;
 no motion correction or spike sorting is performed here. Arrays are memory-mapped
 for loading, though filtering and plotting still allocate memory.
 
 The root [data manifest](../../data_manifest.json) retains the original six SHA-256
-checksums and recording identifiers alongside the Figure 3 inputs. Local
-source-drive paths were omitted for portability.
+checksums and recording identifiers alongside the Figure 3 inputs.
 
 ## Relationship to the manuscript
 
-These are the supplied standalone reproductions, not the final assembled Figure 4
-graphic. The manuscript uses a different color presentation, a shared layout and
-axis limits, and a millimeter depth axis. The supplied notebook uses amplitude
-ranks, a `winter` palette, per-recording limits, and micrometers. Its calculation
-is preserved rather than inferring the manuscript's color normalization. Use the
-included reference PNGs to compare the supplied plotting pipeline.
+The plots reproduce the Figure 4 recordings with different formatting from the
+assembled manuscript figure, including colors, layout, axis limits, and depth
+units (micrometers here versus millimeters in the manuscript).

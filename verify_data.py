@@ -20,10 +20,6 @@ def verify_data(figure="all"):
             errors.append(f"Missing: {entry['file']}")
             continue
         with path.open("rb") as source:
-            if source.read(100).startswith(b"version https://git-lfs.github.com/spec/v1"):
-                errors.append(f"Old LFS pointer, not data: {entry['file']}")
-                continue
-            source.seek(0)
             digest = hashlib.file_digest(source, "sha256").hexdigest()
         if digest != entry["sha256"]:
             errors.append(f"Checksum mismatch: {entry['file']}")

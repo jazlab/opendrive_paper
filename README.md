@@ -6,7 +6,7 @@ This repository reproduces the validation analyses in Figure 3 and the three exa
 
 ## Get the code and data
 
-Clone the repository or download its source ZIP. Figure 3 data is included in the source. The six Figure 4 NumPy arrays are distributed separately in the [versioned data release](https://github.com/jazlab/monkeydrive_paper/releases/tag/data-v1); Git LFS is not required. Use Python 3.11 or later for the download command.
+Clone the repository or download its source ZIP. Figure 3 data is included in the source. The six Figure 4 NumPy arrays are distributed separately in the [versioned data release](https://github.com/jazlab/monkeydrive_paper/releases/tag/data-v1). Use Python 3.11 or later for the download command.
 
 ```bash
 git clone https://github.com/jazlab/monkeydrive_paper.git

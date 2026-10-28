@@ -4,9 +4,6 @@ __pycache__/
 .venv/
 .ipynb_checkpoints/
 results/
-figures/fig3/fig3a/results/
-figures/fig3/fig3b/results/
-figures/fig4/results/
 figures/fig4/data/
 .figure4-data-*/
 figure4-data.zip

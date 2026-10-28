@@ -8,7 +8,7 @@ This script:
 4. Calculates the stationary radial RMS measurement for each drive.
 5. Performs Welch's one-way ANOVA and Holm-adjusted pairwise Welch t-tests.
 6. Reproduces the one-trial XY trajectory figure with a white background.
-7. Writes publication-ready PNG/PDF figures and CSV/text result files.
+7. Writes PNG/PDF figures and CSV/text result files.
 
 The trajectory plot uses a 10-sample rolling mean for visualization only.
 All numerical analyses use the unsmoothed valid samples.

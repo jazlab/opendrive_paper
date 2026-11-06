@@ -1,6 +1,6 @@
 # Reproducing results of the OpenDrive paper
 
-Code and data accompanying *OpenDrive: An Open-Source MicroDrive for Large-Scale Neurophysiology*
+Code and data accompanying *OpenDrive: An Open-Source Microdrive for Large-Scale Neurophysiology*
 
 This repository reproduces the validation analyses in Figure 3 and the three example drift maps in Figure 4. The control software and firmware live in the [opendrive](https://github.com/jazlab/opendrive) repo. You can learn more at our [project website](https://jazlab.github.io/opendrive/).
 
@@ -79,4 +79,4 @@ For questions about OpenDrive or these reproduction materials, contact [opendriv
 
 ## License
 
-Repository code, documentation, and release data are distributed under the [MIT License](LICENSE). Dependencies retain their own licenses. Please cite *OpenDrive: An Open-Source MicroDrive for Large-Scale Neurophysiology* when using these materials.
+Repository code, documentation, and release data are distributed under the [MIT License](LICENSE). Dependencies retain their own licenses. Please cite *OpenDrive: An Open-Source Microdrive for Large-Scale Neurophysiology* when using these materials.

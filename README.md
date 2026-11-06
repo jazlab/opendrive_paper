@@ -73,6 +73,10 @@ Use each notebook's containing folder as its working directory (the JupyterLab d
 
 Run the downloader tests from the repository root with `python -m unittest discover -v`. These tests run offline and do not require the recording data.
 
+## Contact
+
+For questions about OpenDrive or these reproduction materials, contact [opendrive@mit.edu](mailto:opendrive@mit.edu).
+
 ## License
 
 Repository code, documentation, and release data are distributed under the [MIT License](LICENSE). Dependencies retain their own licenses. Please cite *OpenDrive: An Open-Source MicroDrive for Large-Scale Neurophysiology* when using these materials.

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reproduce the MonkeyDrive axial accuracy and precision statistics and figure.
+"""Reproduce the OpenDrive axial accuracy and precision statistics and figure.
 
 This script analyzes repeated 10-mm displacement measurements for three
 microdrives. It reproduces the descriptive statistics and inferential tests
@@ -15,7 +15,7 @@ Analyses produced:
 6. Plot of signed error by drive, showing individual trials, mean, and ±1 SD.
 
 Expected input columns:
-    Trial, MEM Drive, Nan Drive, Monkey Drive
+    Trial, MEM Drive, Nan Drive, OpenDrive
 
 Rows whose Trial value is not numeric (for example, precomputed "Mean" and
 "Std" rows) are ignored so that all statistics are calculated from the raw
@@ -55,13 +55,13 @@ MICRONS_PER_MM = 1000.0
 
 # Input-column names mapped to the display names used in the manuscript.
 DRIVE_COLUMNS: Mapping[str, str] = {
-    "Monkey Drive": "MonkeyDrive",
+    "OpenDrive": "OpenDrive",
     "Nan Drive": "NAN Drive",
     "MEM Drive": "MEM Drive",
 }
 
 # Order used in the figure.
-PLOT_ORDER = ["MEM Drive", "NAN Drive", "MonkeyDrive"]
+PLOT_ORDER = ["MEM Drive", "NAN Drive", "OpenDrive"]
 
 
 @dataclass(frozen=True)
@@ -79,12 +79,12 @@ class GamesHowellResult:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Reproduce MonkeyDrive axial accuracy and precision statistics."
+        description="Reproduce OpenDrive axial accuracy and precision statistics."
     )
     parser.add_argument(
         "input_csv",
         type=Path,
-        help="CSV containing Trial, MEM Drive, Nan Drive, and Monkey Drive columns.",
+        help="CSV containing Trial, MEM Drive, Nan Drive, and OpenDrive columns.",
     )
     parser.add_argument(
         "--output-dir",
@@ -431,7 +431,7 @@ def build_report(
 ) -> str:
     """Create a plain-text record of all reported analyses."""
     lines: list[str] = [
-        "MonkeyDrive axial accuracy and precision analysis",
+        "OpenDrive axial accuracy and precision analysis",
         "=" * 51,
         f"Input file: {input_csv.resolve()}",
         f"Commanded displacement: {command_distance_mm:.6f} mm",

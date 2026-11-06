@@ -1,4 +1,4 @@
-"""Reproduce MonkeyDrive Figures 3 and 4 with the current Python environment."""
+"""Reproduce OpenDrive Figures 3 and 4 with the current Python environment."""
 
 import argparse
 import os

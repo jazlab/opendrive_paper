@@ -1,4 +1,4 @@
-# Figure 4: MonkeyDrive drift maps
+# Figure 4: OpenDrive drift maps
 
 The three example recordings come from thalamus, lateral intraparietal area (LIP),
 and cerebellar dentate nucleus (DN).

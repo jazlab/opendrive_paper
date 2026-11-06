@@ -99,7 +99,7 @@ def download_data(archive=None):
     if archive is not None:
         install_archive(Path(archive).expanduser(), release, entries, ROOT)
     else:
-        with tempfile.TemporaryDirectory(prefix="monkeydrive-download-") as temporary:
+        with tempfile.TemporaryDirectory(prefix="opendrive-download-") as temporary:
             downloaded = Path(temporary) / release["asset"]
             fetch_archive(release, downloaded)
             install_archive(downloaded, release, entries, ROOT)

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Publication analysis for MonkeyDrive lateral-motion validation.
+"""Publication analysis for OpenDrive lateral-motion validation.
 
 This script:
-1. Loads the three moving trials for MonkeyDrive, NAN Drive, and MEM Drive.
+1. Loads the three moving trials for OpenDrive, NAN Drive, and MEM Drive.
 2. Calculates two-dimensional radial RMS displacement for each trial.
 3. Repeats the calculation after linear detrending of X and Y versus time.
 4. Calculates the stationary radial RMS measurement for each drive.
@@ -38,11 +38,11 @@ import pandas as pd
 from scipy import stats
 
 
-DRIVE_ORDER = ("MEM Drive", "NAN Drive", "MonkeyDrive")
+DRIVE_ORDER = ("MEM Drive", "NAN Drive", "OpenDrive")
 COLORS = {
     "MEM Drive": "#1f77b4",
     "NAN Drive": "#ff7f0e",
-    "MonkeyDrive": "#2ca02c",
+    "OpenDrive": "#2ca02c",
 }
 
 
@@ -92,13 +92,13 @@ def resolve_dataset_root(data_path: Path, temporary_directory: Path) -> Path:
         if (
             (candidate / "memdrive").is_dir()
             and (candidate / "nandrive").is_dir()
-            and (candidate / "monkeydrive").is_dir()
+            and (candidate / "opendrive").is_dir()
         ):
             return candidate
 
     raise FileNotFoundError(
         "Could not find the expected 'memdrive', 'nandrive', and "
-        "'monkeydrive' folders beneath the supplied path."
+        "'opendrive' folders beneath the supplied path."
     )
 
 
@@ -121,20 +121,20 @@ def require_files(paths: Iterable[Path], expected: int, description: str) -> tup
 def locate_files(root: Path) -> dict[str, DriveFiles]:
     mem_dir = root / "memdrive"
     nan_dir = root / "nandrive"
-    monkey_dir = root / "monkeydrive"
+    open_dir = root / "opendrive"
 
     mem_moving = require_files(mem_dir.glob("*_moving_t*.csv"), 3, "MEM moving")
     nan_moving = require_files(nan_dir.glob("*_moving_t*.csv"), 3, "NAN moving")
-    monkey_moving = require_files(monkey_dir.glob("*_moving_t*.csv"), 3, "MonkeyDrive moving")
+    open_moving = require_files(open_dir.glob("*_moving_t*.csv"), 3, "OpenDrive moving")
 
     mem_static = require_files(mem_dir.glob("*_static_t*.csv"), 1, "MEM stationary")[0]
     nan_static = require_files(nan_dir.glob("*_static_t*.csv"), 1, "NAN stationary")[0]
-    monkey_static = require_files(monkey_dir.glob("*_static_t*.csv"), 1, "MonkeyDrive stationary")[0]
+    open_static = require_files(open_dir.glob("*_static_t*.csv"), 1, "OpenDrive stationary")[0]
 
     return {
         "MEM Drive": DriveFiles(mem_moving, mem_static),
         "NAN Drive": DriveFiles(nan_moving, nan_static),
-        "MonkeyDrive": DriveFiles(monkey_moving, monkey_static),
+        "OpenDrive": DriveFiles(open_moving, open_static),
     }
 
 
@@ -386,12 +386,12 @@ def write_report(
     tests: pd.DataFrame,
 ) -> None:
     indexed = summary.set_index("drive")
-    monkey = indexed.loc["MonkeyDrive"]
+    opendrive = indexed.loc["OpenDrive"]
     nan = indexed.loc["NAN Drive"]
     mem = indexed.loc["MEM Drive"]
 
-    reduction_nan = 100.0 * (1.0 - monkey["raw_mean_um"] / nan["raw_mean_um"])
-    reduction_mem = 100.0 * (1.0 - monkey["raw_mean_um"] / mem["raw_mean_um"])
+    reduction_nan = 100.0 * (1.0 - opendrive["raw_mean_um"] / nan["raw_mean_um"])
+    reduction_mem = 100.0 * (1.0 - opendrive["raw_mean_um"] / mem["raw_mean_um"])
 
     lines = [
         "LATERAL MOTION ANALYSIS",
@@ -399,7 +399,7 @@ def write_report(
         "",
         "Moving trials: two-dimensional radial RMS about each trial's mean XY position",
     ]
-    for drive in ("MonkeyDrive", "NAN Drive", "MEM Drive"):
+    for drive in ("OpenDrive", "NAN Drive", "MEM Drive"):
         row = indexed.loc[drive]
         lines.append(
             f"  {drive}: {row['raw_mean_um']:.2f} ± {row['raw_sd_um']:.2f} µm "
@@ -409,18 +409,18 @@ def write_report(
     lines.extend(
         [
             "",
-            f"MonkeyDrive reduction relative to NAN Drive: {reduction_nan:.1f}%",
-            f"MonkeyDrive reduction relative to MEM Drive: {reduction_mem:.1f}%",
+            f"OpenDrive reduction relative to NAN Drive: {reduction_nan:.1f}%",
+            f"OpenDrive reduction relative to MEM Drive: {reduction_mem:.1f}%",
             "",
             "Stationary recordings: radial RMS about the mean XY position",
         ]
     )
-    for drive in ("MonkeyDrive", "NAN Drive", "MEM Drive"):
+    for drive in ("OpenDrive", "NAN Drive", "MEM Drive"):
         row = indexed.loc[drive]
         lines.append(f"  {drive}: {row['stationary_radial_rms_um']:.2f} µm")
 
     lines.extend(["", "Linearly detrended moving trials"])
-    for drive in ("MonkeyDrive", "NAN Drive", "MEM Drive"):
+    for drive in ("OpenDrive", "NAN Drive", "MEM Drive"):
         row = indexed.loc[drive]
         lines.append(
             f"  {drive}: {row['detrended_mean_um']:.2f} ± "

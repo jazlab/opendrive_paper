@@ -1,23 +1,23 @@
-# Reproducing results of the MonkeyDrive paper
+# Reproducing results of the OpenDrive paper
 
-Code and data accompanying *MonkeyDrive: An open-source microdrive for primate neurophysiology*
+Code and data accompanying *OpenDrive: An Open-Source MicroDrive for Large-Scale Neurophysiology*
 
-This repository reproduces the validation analyses in Figure 3 and the three example drift maps in Figure 4. The control software and firmware live in the [monkeydrive](https://github.com/jazlab/monkeydrive) repo. You can learn more at our [project website](https://jazlab.github.io/monkeydrive/).
+This repository reproduces the validation analyses in Figure 3 and the three example drift maps in Figure 4. The control software and firmware live in the [opendrive](https://github.com/jazlab/opendrive) repo. You can learn more at our [project website](https://jazlab.github.io/opendrive/).
 
 ## Get the code and data
 
-Clone the repository or download its source ZIP. Figure 3 data is included in the source. The six Figure 4 NumPy arrays are distributed separately in the [versioned data release](https://github.com/jazlab/monkeydrive_paper/releases/tag/data-v1). Use Python 3.11 or later for the download command.
+Clone the repository or download its source ZIP. Figure 3 data is included in the source. The six Figure 4 NumPy arrays are distributed separately in the [versioned data release](https://github.com/jazlab/opendrive_paper/releases/tag/data-v1). Use Python 3.11 or later for the download command.
 
 ```bash
-git clone https://github.com/jazlab/monkeydrive_paper.git
-cd monkeydrive_paper
+git clone https://github.com/jazlab/opendrive_paper.git
+cd opendrive_paper
 python download_data.py
 python verify_data.py
 ```
 
 `download_data.py` downloads `figure4-data.zip`, verifies the archive and each extracted file against SHA-256 checksums, and installs the arrays in `figures/fig4/data/`. It skips downloading when all six files already match. Allow about 3 GB of free disk space for the download, extraction, and outputs. You can skip the download to run only Figure 3.
 
-Alternatively, download `figure4-data.zip` from the [data release](https://github.com/jazlab/monkeydrive_paper/releases/tag/data-v1) in your browser and run `python download_data.py --archive /path/to/figure4-data.zip`.
+Alternatively, download `figure4-data.zip` from the [data release](https://github.com/jazlab/opendrive_paper/releases/tag/data-v1) in your browser and run `python download_data.py --archive /path/to/figure4-data.zip`.
 
 `verify_data.py` checks every input and reports missing or damaged files. For Figure 3 alone, use `python verify_data.py --figure 3`.
 
@@ -75,4 +75,4 @@ Run the downloader tests from the repository root with `python -m unittest disco
 
 ## License
 
-Repository code, documentation, and release data are distributed under the [MIT License](LICENSE). Dependencies retain their own licenses. Please cite *MonkeyDrive: An open-source microdrive for primate neurophysiology* when using these materials.
+Repository code, documentation, and release data are distributed under the [MIT License](LICENSE). Dependencies retain their own licenses. Please cite *OpenDrive: An Open-Source MicroDrive for Large-Scale Neurophysiology* when using these materials.

@@ -1,6 +1,6 @@
-# Figure 3 — MonkeyDrive validation analyses
+# Figure 3 — OpenDrive validation analyses
 
-This directory contains the raw measurements, analysis scripts, and reference plots for Figure 3 of the MonkeyDrive manuscript.
+This directory contains the raw measurements, analysis scripts, and reference plots for Figure 3 of the OpenDrive manuscript.
 
 See the [root README](../../README.md#install-and-reproduce) for installation and reproduction commands. The root runner saves these panels to `results/fig3a/` and `results/fig3b/` by default.
 
@@ -13,7 +13,7 @@ For interactive exploration, open [`validation.ipynb`](validation.ipynb) using t
 
 ## Figure 3A input folders
 
-The `fig3a/data/` directory contains three drive subfolders: `memdrive/`, `nandrive/`, and `monkeydrive/`. The Figure 3A script expects these exact lowercase folder names.
+The `fig3a/data/` directory contains three drive subfolders: `memdrive/`, `nandrive/`, and `opendrive/`. The Figure 3A script expects these exact lowercase folder names.
 
 ## Figure 3A outputs
 

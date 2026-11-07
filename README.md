@@ -2,7 +2,7 @@
 
 Code and data accompanying *OpenDrive: An Open-Source Microdrive for Large-Scale Neurophysiology*
 
-This repository reproduces the validation analyses in Figure 3 and the three example drift maps in Figure 4. The control software and firmware live in the [opendrive](https://github.com/jazlab/opendrive) repo. You can learn more at our [project website](https://jazlab.github.io/opendrive/).
+This repository reproduces the validation analyses in Figure 3 and the three example drift maps in Figure 4. The software, firmware, and hardware live in the [opendrive](https://github.com/jazlab/opendrive) repo. You can learn more at our [project website](https://jazlab.github.io/opendrive/).
 
 ## Get the code and data
 
